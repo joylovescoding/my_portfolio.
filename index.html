@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Jematia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav class="navbar">
+    <a href="#home" class="logo">My Portfolio</a>
+
+<button
+    class="menu-toggle"
+    id="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="nav-links"
+>
+    ☰
+</button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+   
+<!-- Hero Section -->
+<header class="hero" id="home">
+    <div class="hero-content">
+
+        <p class="hero-greeting">HELLO, I'M JOY JEMATIA</p>
+
+        <h1>
+            Upcoming Web Developer
+            <span>and Creative Problem Solver</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            I'm a first-year Computer Science student at Pwani University,
+            passionate about creating user-friendly websites
+            and making technology accessible.
+        </p>
+
+        <div class="hero-buttons">
+            <button type="button" class="hero-button" id="projects-button">
+    View My Projects
+</button>
+
+            <a href="#about" class="project-link">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+
+    <main>
+        
+<section id="about" class="about-section">
+    <div class="about-content">
+
+       
+<div class="about-cue-cards">
+
+    <article class="about-cue-card card-one">
+        <span class="cue-number">01 / INTRODUCTION</span>
+        <h3>A Little About Me</h3>
+        <p>
+            Hello! I'm Joy, a student at Pwani University
+            with a growing passion for web development
+            and creative digital experiences.
+        </p>
+    </article>
+
+    <article class="about-cue-card card-two">
+        <span class="cue-number">02 / MY JOURNEY</span>
+        <h3>Learning & Growing</h3>
+        <p>
+            I'm developing my skills in HTML, CSS, and
+            JavaScript, one project at a time. Every
+            challenge is an opportunity to learn something new.
+        </p>
+    </article>
+
+    <article class="about-cue-card card-three">
+        <span class="cue-number">03 / MY VISION</span>
+        <h3>Creating With Purpose</h3>
+        <p>
+            I want to build beautiful, accessible, and
+            user-friendly websites that turn ideas into
+            meaningful digital experiences.
+        </p>
+    </article>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const aboutSection = document.querySelector("#about");
+    const cardStack = document.querySelector(".about-cue-cards");
+
+    if (!aboutSection || !cardStack) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                cardStack.classList.remove("is-animating");
+
+                // Restart the sequence cleanly
+                void cardStack.offsetWidth;
+
+                cardStack.classList.add("is-animating");
+            } else {
+                cardStack.classList.remove("is-animating");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(aboutSection);
+});
+</script>
+
+</div>
+
+
+    </div>
+</section>
+
+        
+<section id="skills" class="skills-section">
+    <h2>My Skills</h2>
+    <p>Here are some technologies I'm learning and using:</p>
+
+    <div class="skills-list">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Git</span>
+    </div>
+</section>
+
+        <section id="projects">
+    <h2>My Projects</h2>
+    <p>Here are some projects I'm working on as I grow my web development skills.</p>
+
+    <div class="projects-grid">
+        <div class="project-card">
+
+            
+<article class="project-card campus-card">
+
+    <div class="project-visual campus-visual">
+        <span class="project-icon">🎓</span>
+        <span class="visual-label">STUDENT LIFE</span>
+
+        <h3>Campus Connect</h3>
+
+        <p>Campus life, made easier.</p>
+    </div>
+
+    <div class="project-info">
+
+        <span class="project-type">CONCEPT PROJECT 01</span>
+
+        <h3>Campus Connect</h3>
+
+        <p>
+            A student-focused website concept designed to help
+            university students organize their class schedules,
+            track assignment deadlines, and stay updated with
+            important campus announcements.
+        </p>
+
+        <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+
+        <span class="project-status">Design concept</span>
+<a href="campus-connect.html" class="project-button">
+    Explore Project
+</a>
+    </div>
+
+</article>
+
+        </div>
+
+        
+<!-- Pearl Dental Clinic Project -->
+<div class="project-card">
+    <h3>Pearl Dental Clinic</h3>
+
+    <p>
+        A dental clinic website featuring appointment booking,
+        doctor availability, and a doctor dashboard.
+    </p>
+
+    <a href="./smilesmile_dental/index.html"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Live Demo
+    </a>
+
+    <a href="./smilesmile_dental/doctor_dashboard.html"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Doctor Dashboard
+    </a>
+</div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>
+        Have a question or want to work together?
+        I'd love to hear from you!
+    </p>
+
+    <a href="mailto: joyjematia9706@gmail.com " class="project-link">
+        Email Me
+        
+    </a>
+     <a href="tel:+254180397500" class="project-link">
+        Call Me
+        
+    </a>
+
+</section>
+
+
+
+        
+    </main>
+    
+
+
+    <script src="script.js"></script>
+    
+<footer class="site-footer">
+    <p>&copy; 2026 JoyJematia. All rights reserved.</p>
+    <p>Built with HTML, CSS, and JavaScript.</p>
+    
+<p>
+    Follow me on Instagram:
+    <a href="https://www.instagram.com/JXMATIA/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="instagram-link">
+        Jxmatia
+    </a>
+</p>
+
+</footer>
+
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+    ↑
+</button>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
