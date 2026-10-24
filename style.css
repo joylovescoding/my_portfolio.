@@ -1979,3 +1979,31 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+.project-card {
+    max-width: 500px;
+    padding: 25px;
+    margin: 25px 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #087f8c;
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: #087f8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.project-button:hover {
+    background: #065f68;
+}
