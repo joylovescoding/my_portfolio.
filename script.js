@@ -76,3 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(aboutSection);
 });
 </script>
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-links");
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+
+        const isOpen = navMenu.classList.contains("active");
+
+        hamburger.textContent = isOpen ? "✕" : "☰";
+        hamburger.setAttribute("aria-expanded", isOpen);
+    });
+
+    navMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+            hamburger.textContent = "☰";
+            hamburger.setAttribute("aria-expanded", "false");
+        });
+    });
+}
