@@ -2050,3 +2050,26 @@ img {
     }
 }
 
+/* View My Projects Button */
+.view-projects-btn {
+    display: inline-block;
+    background-color: plum;
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid plum;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.view-projects-btn:hover {
+    background-color: #8e4585;
+    border-color: #8e4585;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(142, 69, 133, 0.3);
+}
